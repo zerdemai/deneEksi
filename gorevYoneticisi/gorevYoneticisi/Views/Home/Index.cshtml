@@ -1,0 +1,114 @@
+﻿@model gorevYoneticisi.Models.users
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Giriş Yap</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <link href="~/Styles/style.css" rel="stylesheet" />
+</head>
+<body>
+    <div>
+
+        <h2> Görev Yöneticisi Uygulaması</h2>
+
+        <div class="cont">
+
+            <div class="form">
+                @using (Html.BeginForm("Index", "Home", FormMethod.Post))
+                {
+                    <form action="">
+                        <h1>Giriş Yap</h1>
+
+                        @Html.TextBoxFor(f => f.username, new { @class = "user", placeholder = "Kullanıcı Adınızı Giriniz..", title = "Kullanıcı adınızı giriniz.", @Value = @ViewBag.user })
+
+                        @Html.PasswordFor(f => f.password, new { @class = "pass", placeholder = "Parolanızı Giriniz..", title = "Kullanıcı şifrenizi giriniz.", @Value = @ViewBag.password })
+
+                        <button type="submit" class="login fr">Giriş</button><br class="cl" />
+                        <a href="#" data-toggle="modal" data-target="#exampleModal" id="kayitLink">Kayıt olmak için tıklayınız</a>
+
+                    </form>}
+            </div>
+
+            <h2> Burak Çetin </h2>
+
+        </div>
+
+
+        <!------------------------------------------------------------------------Kayıt Sayfası Modal ---------------------------------------------------------------------->
+        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Kayıt Ol</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    @using (Html.BeginForm("Kayit", "Home", FormMethod.Post))
+                    {<div class="modal-body">
+                            @Html.ValidationMessageFor(f => f.username, String.Empty, new { @style = "color:red; text-align:center;display:block;!important" })
+                            @Html.TextBoxFor(f => f.username, new { @class = "user", placeholder = "Kullanıcı Adınızı Giriniz..", title = "Kullanıcı adınızı giriniz.", @Value = @ViewBag.user })
+
+                            @Html.ValidationMessageFor(f => f.password, String.Empty, new { @style = "color:red; text-align:center;display:block;!important" })
+                            @Html.PasswordFor(f => f.password, new { @class = "pass", placeholder = "Parolanızı Giriniz..", title = "Parolanızı giriniz.", @Value = @ViewBag.password })
+                            @Html.ValidationMessageFor(f => f.ConfirmPassword, String.Empty, new { @style = "color:red; text-align:center;display:block;!important" })
+                            @Html.PasswordFor(f => f.ConfirmPassword, new { @class = "pass", placeholder = "Parolanızı  Tekrar Giriniz..", title = "Parolanızı giriniz.", @Value = @ViewBag.password })
+
+
+
+                            @Html.ValidationMessageFor(f => f.name, String.Empty, new { @style = "color:red; text-align:center;display:block;!important" })
+                            @Html.TextBoxFor(f => f.name, new { @class = "user", placeholder = "İsminizi Giriniz..", title = "Kullanıcı adınızı giriniz.", @Value = @ViewBag.user })
+                            @Html.ValidationMessageFor(f => f.surname, String.Empty, new { @style = "color:red; text-align:center;display:block;!important" })
+                            @Html.TextBoxFor(f => f.surname, new { @class = "user", placeholder = "Soyadınızı Giriniz..", title = "Kullanıcı adınızı giriniz.", @Value = @ViewBag.user })
+
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Vazgeç</button>
+                            <button type="submit" class="btn btn-primary">Kaydet</button>
+                        </div>}
+
+                </div>
+            </div>
+        </div>
+        <!-------------------------------------------------------------------- ---------------------------------------------------------------------->
+        @*@using (Html.BeginForm("Index", "Home", FormMethod.Post))
+            {
+
+                <div class="form col">
+
+
+                    @Html.LabelFor(f => f.username)
+                    @Html.TextBoxFor(f => f.username, new { title = "Kullanıcı adınızı giriniz.", @Value = @ViewBag.user })
+
+
+
+                    @Html.LabelFor(f => f.password)
+                    @Html.PasswordFor(f => f.password, new { title = "Kullanıcı şifrenizi giriniz.", @Value = @ViewBag.password })
+
+
+                    <button type="submit" class="small fr">Giriş</button><br class="cl" />
+
+
+
+                </div>
+
+            }*@
+      
+    </div>
+
+
+
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.0.3.min.js"></script>
+    
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+</body>
+</html>

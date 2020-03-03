@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.902
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "gorevYoneticisi", "gorevYoneticisi\gorevYoneticisi.csproj", "{9C0080BF-5A89-44A1-9016-D561C867AE3B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "gorevYoneticisiApi", "gorevYoneticisiApi\gorevYoneticisiApi.csproj", "{5DCD5702-57C1-4BBA-822F-763A4A50EECB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9C0080BF-5A89-44A1-9016-D561C867AE3B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9C0080BF-5A89-44A1-9016-D561C867AE3B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9C0080BF-5A89-44A1-9016-D561C867AE3B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9C0080BF-5A89-44A1-9016-D561C867AE3B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5DCD5702-57C1-4BBA-822F-763A4A50EECB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5DCD5702-57C1-4BBA-822F-763A4A50EECB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5DCD5702-57C1-4BBA-822F-763A4A50EECB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5DCD5702-57C1-4BBA-822F-763A4A50EECB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {1ECC3FAE-8CA9-4422-BCB0-C0CA96629062}
+	EndGlobalSection
+EndGlobal
